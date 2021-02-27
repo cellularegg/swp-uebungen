@@ -12,5 +12,6 @@ Diese können sie zu Beginn von einem Schmied ihrer Wahl erwerben.
 Wir benutzen das Abstract FactoryPattern (Abstrakte Fabrik), um festzulegen, welcher Schmied uns die Waffen erstellt.
 
 ## Implementierungsdetails
-Schreibensie ein Programm, bei welchem sie über eine Konfiguration (z.B. enum-Flag, Kommandozeilenparameter, etc.) angeben, von welchem Schmied sie die Schwerter kaufen. Erstellen sie ein Szenario nach ihrer Fantasie und geben sie auf der Console aus, was passiert.\
+Schreibensie ein Programm, bei welchem sie über eine Konfiguration (z.B. enum-Flag, Kommandozeilenparameter, etc.) angeben, von welchem Schmied sie die Schwerter kaufen. Erstellen sie ein Szenario nach ihrer Fantasie und geben sie auf der Console aus, was passiert.
+
 Gutes Gelingen!
