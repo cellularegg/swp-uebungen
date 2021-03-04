@@ -1,0 +1,92 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+title Abstract Factory DP
+
+ISword <|-- ILongSword
+ISword <|-- IShortSword
+
+interface ISword {
++ int Damage
++ int Weight
++ string GetStats()
+}
+
+interface ILongSword {
++ bool TwoHanded
+}
+
+interface IShortSword {
++ bool Throwable
+}
+
+IShortSword <|-- CynradShortSword
+class CynradShortSword {
++ int Damage
++ int Weight
++ bool Glows
++ bool Throwable
++ CynradShortSword(int, dmg, int w, bool t)
++ string GetStats()
+}
+
+ILongSword <|-- CynradLongSword
+class CynradLongSword {
++ int Damage
++ int Weight
++ bool Glows
++ bool TwoHanded
++ CynradLongSword(int, dmg, int w, bool t)
++ string GetStats()
+}
+
+IShortSword <|-- LatharShortSword
+class LatharShortSword {
++ int Damage
++ int Weight
++ bool Glows
++ bool Throwable
++ LatharShortSword(int, dmg, int w, bool t)
++ string GetStats()
+}
+
+ILongSword <|-- LatharLongSword
+class LatharLongSword {
++ int Damage
++ int Weight
++ bool Glows
++ bool TwoHanded
++ LatharLongSword(int, dmg, int w, bool t)
++ string GetStats()
+}
+
+interface ISmith {
++ IShortSword GetShortSword()
++ ILongSword GetLongSword()
+}
+
+ISmith <|-- LatharSmith
+class LatharSmith {
++ IShortSword GetShortSword()
++ ILongSword GetLongSword()
+}
+
+ISmith <|-- CynradSmith
+class CynradSmith {
++ IShortSword GetShortSword()
++ ILongSword GetLongSword()
+}
+
+class Player {
++ IShortSword ShortSword
++ ILongSword LongSword
++ Player(SmithType type)
+}
+Player -- SmithType
+enum SmithType {
+Lathar
+Cynrad
+}
+
+
+@enduml
