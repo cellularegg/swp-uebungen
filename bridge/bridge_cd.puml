@@ -1,0 +1,60 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+title Bridge DP
+
+interface ISpell {
+    + string SpellText
+    + string GetSpellInCallrisch()
+    + string GetSpellInSelkisch()
+}
+ISpell <|-- AbstractSpell
+
+abstract class AbstractSpell {
+    + string SpellText
+    + string GetSpellInCallrisch()
+    + string GetSpellInSelkisch() 
+}
+AbstractSpell <|-- ShortSpell
+class ShortSpell {
+    + ShortSpell(string spellText)
+}
+AbstractSpell <|-- LongSpell
+class LongSpell {
+    + LongSpell(string spellText)
+}
+
+abstract class AbstractSword {
+    ~ ISpell Spell
+    + int Damage
+    + string Name
+    + int Lenght
+    + AbstractSword(ISpell spell, int damage, string name, int length)
+    + string GetSpell(Position position)
+    + string ToString()
+}
+AbstractSword <|-- ShortSword
+class ShortSword {
+    + ShortSword(ISpell spell, int damage, string name, int length)
+}
+AbstractSword <|-- LongSword
+class LongSword {
+    + LongSword(ISpell spell, int damage, string name, int length)
+}
+
+class Player {
+    + Position Position
+    + AbstractSword Sword
+    + Player(Position position, SwordType swordType)
+    + void SaySpell()
+}
+
+enum Position {
+    Left
+    Right
+}
+enum SwordType {
+    Short
+    Long
+}
+@enduml
