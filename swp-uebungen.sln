@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "abstract_facotry", "abstract_facotry\abstract_facotry.csproj", "{D4AB0729-EB44-4B6B-A0CA-ABA72F4DEAAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prototype", "prototype\prototype.csproj", "{3E539A20-38D3-4828-B71E-6B7E0E781567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bridge", "bridge\bridge.csproj", "{099388F9-CEE6-40EF-8EFE-0FBAD887DE7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{D4AB0729-EB44-4B6B-A0CA-ABA72F4DEAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4AB0729-EB44-4B6B-A0CA-ABA72F4DEAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4AB0729-EB44-4B6B-A0CA-ABA72F4DEAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E539A20-38D3-4828-B71E-6B7E0E781567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E539A20-38D3-4828-B71E-6B7E0E781567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E539A20-38D3-4828-B71E-6B7E0E781567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E539A20-38D3-4828-B71E-6B7E0E781567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{099388F9-CEE6-40EF-8EFE-0FBAD887DE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{099388F9-CEE6-40EF-8EFE-0FBAD887DE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{099388F9-CEE6-40EF-8EFE-0FBAD887DE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{099388F9-CEE6-40EF-8EFE-0FBAD887DE7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
