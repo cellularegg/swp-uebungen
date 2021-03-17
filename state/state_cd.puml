@@ -1,0 +1,79 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+interface IPinballState {
+ void InsertCoin()
+ void StartPlaying()
+ void HitBall()
+ void RaiseScore()
+ void LooseGame()
+ void WinGame()
+}
+
+
+NoCoinInsertedState -|> IPinballState
+class NoCoinInsertedState {
+ + void InsertCoin()
+ + void StartPlaying()
+ + void HitBall()
+ + void RaiseScore()
+ + void LooseGame()
+ + void WinGame()
+}
+
+
+IPinballState <|-  IdleState
+class IdleState {
+ + void InsertCoin()
+ + void StartPlaying()
+ + void HitBall()
+ + void RaiseScore()
+ + void LooseGame()
+ + void WinGame()
+}
+
+IPinballState <|--  PlayingBeginnerState
+class PlayingBeginnerState {
+ + void InsertCoin()
+ + void StartPlaying()
+ + void HitBall()
+ + void RaiseScore()
+ + void LooseGame()
+ + void WinGame()
+}
+
+IPinballState <|--  PlayingMediumState
+class PlayingMediumState {
+ + void InsertCoin()
+ + void StartPlaying()
+ + void HitBall()
+ + void RaiseScore()
+ + void LooseGame()
+ + void WinGame()
+}
+
+IPinballState <|--  PlayingExpertState
+class PlayingExpertState {
+ + void InsertCoin()
+ + void StartPlaying()
+ + void HitBall()
+ + void RaiseScore()
+ + void LooseGame()
+ + void WinGame()
+}
+
+Pinball --> IPinballState : " has a State"
+class Pinball {
+ + int Coins
+ + IPinballState PinballState
+ + void InsertCoin()
+ + void StartPlaying()
+ + void HitBall()
+ + void RaiseScore()
+ + void LooseGame()
+ + void WinGame()
+}
+
+
+@enduml
