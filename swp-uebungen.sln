@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bridge", "bridge\bridge.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "state", "state\state.csproj", "{403CB420-EA6F-4423-8A75-7D1C8FC3DDDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "visitor", "visitor\visitor.csproj", "{B284D1A0-ECD2-49FB-868F-6FA1EE744EF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{403CB420-EA6F-4423-8A75-7D1C8FC3DDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{403CB420-EA6F-4423-8A75-7D1C8FC3DDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{403CB420-EA6F-4423-8A75-7D1C8FC3DDDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B284D1A0-ECD2-49FB-868F-6FA1EE744EF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B284D1A0-ECD2-49FB-868F-6FA1EE744EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B284D1A0-ECD2-49FB-868F-6FA1EE744EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B284D1A0-ECD2-49FB-868F-6FA1EE744EF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

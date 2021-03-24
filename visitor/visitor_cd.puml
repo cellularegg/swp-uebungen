@@ -1,0 +1,73 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+enum Color {
+RED
+GREEN
+BLUE
+}
+
+interface IElement{
+    +void Accept(IVisitor visitor)
+}
+IElement <|-- Led
+class Led {
+    {static} - int _counter
+    + int Number
+    + bool IsActive
+    + Color LedColor
+    + int Score
+    + Led(Color ledColor)
+    + void Accept(IVisitor visitor)
+}
+IElement <|-- Ramp
+class Ramp {
+    + string Name
+    + bool IsOpen
+    + int Score
+    + int Iterations
+    + bool IsBlinking
+    + Ramp(string name, bool isBlinking, int interations)
+    + void Accept(IVisitor visitor)
+}
+
+IElement <|-- Target
+class Target {
+    + char Letter
+    + bool IsUp
+    + int Score
+    + Target(char letter)
+    + void Accept(IVisitor visitor)
+}
+
+
+interface IVisitor{
+    +void Visit(Ramp ramp);
+    +void Visit(Led led);
+    +void Visit(Target target);
+}
+IVisitor <|-- PointVisitor
+class PointVisitor {
+    +void Visit(Ramp ramp);
+    +void Visit(Led led);
+    +void Visit(Target target);
+}
+
+IVisitor <|-- ReportVisitor
+class ReportVisitor {
+    +void Visit(Ramp ramp);
+    +void Visit(Led led);
+    +void Visit(Target target);
+}
+
+IVisitor <|-- ResetVisitor
+class ResetVisitor {
+    +void Visit(Ramp ramp);
+    +void Visit(Led led);
+    +void Visit(Target target);
+}
+
+
+
+@enduml
